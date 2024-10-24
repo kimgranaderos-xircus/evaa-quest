@@ -1,10 +1,11 @@
 import { AppLayout } from "@/layouts/AppLayout"
-import { Button, Card, Heading, HStack, Icon, Image, List, Spacer, Spinner, Text } from "@chakra-ui/react"
-import { QuestTasks, useQuestorJoin, useQuests } from "@xw3/maki-quest"
-import Link from "next/link"
-import { TbArrowRight, TbDiamondFilled, TbDiamonds, TbUsers } from "react-icons/tb"
+import { Button, Card, Heading, HStack, Icon, Image, Spacer, Text } from "@chakra-ui/react"
+import { QuestTasks, useQuest } from "@xw3/maki-quest"
+import { TbDiamondFilled, TbDiamonds, TbUsers } from "react-icons/tb"
 
 export default function Home() {
+  const { data: quest }  = useQuest('66507132f6826017789b74d9')
+
   return (
     <AppLayout>
       <Card variant="outline" bgColor="rgb(81, 0, 255)" p={4} rounded="md">
@@ -16,11 +17,11 @@ export default function Home() {
         <Text>Join our community quest</Text>
         <HStack>
           <HStack spacing={1}>
-            <Text fontWeight="bold">8.3K</Text>
+            <Text fontWeight="bold">{quest?.totalUsers}</Text>
             <Icon as={TbUsers} />
           </HStack>
           <HStack spacing={1} ml={2}>
-            <Text fontWeight="bold">168.5K</Text>
+            <Text fontWeight="bold">{quest?.totalPoints}</Text>
             <Icon as={TbDiamondFilled} />
           </HStack>
           <Spacer />
