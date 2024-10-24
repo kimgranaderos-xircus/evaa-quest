@@ -25,9 +25,6 @@ export default function Home() {
             <Icon as={TbDiamondFilled} />
           </HStack>
           <Spacer />
-          <Button leftIcon={<TbDiamonds />} size="sm">
-            Connect
-          </Button>
         </HStack>
       </Card>
       <Text color="gray.500" fontSize="12px" mt={2} mb={5} ml={4}>

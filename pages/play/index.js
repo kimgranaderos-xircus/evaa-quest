@@ -1,10 +1,10 @@
 import { AppLayout } from "@/layouts/AppLayout"
-import { Text } from "@chakra-ui/react"
+import { Heading } from "@chakra-ui/react"
 
 export default function Play() {
   return (
     <AppLayout>
-      <Text align="center">Connect Your Wallet First</Text>
+      <Heading fontSize="30px">Play</Heading>
     </AppLayout>
   )
 }
